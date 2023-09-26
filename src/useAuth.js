@@ -8,7 +8,7 @@ export default function useAuth(code) {
 
   useEffect(() => {
     axios
-      .post("process.env.HOST/login", {
+      .post("process.env.REACT_APP_HOST/login", {
         code,
       })
       .then(res => {
@@ -28,7 +28,7 @@ export default function useAuth(code) {
     if (!refreshToken || !expiresIn) return
     const interval = setInterval(() => {
       axios
-        .post("process.env.HOST/refresh", {
+        .post("process.env.REACT_APP_HOST/refresh", {
           refreshToken,
         })
         .then(res => {
