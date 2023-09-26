@@ -7,7 +7,7 @@ import SpotifyWebApi from "spotify-web-api-node"
 import axios from "axios"
 
 const spotifyApi = new SpotifyWebApi({
-  clientId:process.env.CLIENT_ID,
+  clientId:process.env.REACT_APP_CLIENT_ID,
   //clientId: "07630faba9c34d7294346ed4dbfb91b7",
 })
 
@@ -28,7 +28,7 @@ export default function Dashboard({ code }) {
     if (!playingTrack) return
 
     axios
-      .get("process.env.HOST/lyrics", {
+      .get("process.env.REACT_APP_HOST/lyrics", {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artist,
