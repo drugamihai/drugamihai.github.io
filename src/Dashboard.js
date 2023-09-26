@@ -28,7 +28,7 @@ export default function Dashboard({ code }) {
     if (!playingTrack) return
 
     axios
-      .get("process.env.REACT_APP_HOST/lyrics", {
+      .get(`${process.env.REACT_APP_HOST}/lyrics`, {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artist,
