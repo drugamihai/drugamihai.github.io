@@ -5,7 +5,7 @@ const AUTH_URL =
   `https://accounts.spotify.com/authorize?client_id=07630faba9c34d7294346ed4dbfb91b7&response_type=code&redirect_uri=${process.env.CLIENT_HOST}&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state`
 
 export default function Login() {
-console.log(process.env)
+
   
   return (
     <Container
